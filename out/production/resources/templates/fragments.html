@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+
+<head th:fragment="head">
+
+    <!-- Bootstrap stylesheets and script -->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link th:href="@{/css/stockdata.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title th:text="'StockMarket Parser' + ${title == null ? '' : ' :: ' + title}">StockMarketParser</title>
+</head>
+
+<body>
+
+<div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a th:href="@{/}" class="navbar-brand">StockMarketParser</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/search}">Search</a></li>
+                <li><a th:href="@{/list}">List</a></li>
+                <li><a th:href="@{/}">Weka Machine Learning</a></li>
+                <li><a th:href="@{/}">News</a></li>
+                <li><a th:href="@{/}">Sentiment</a></li>
+                <li><a th:href="@{/}">SMS Alerts</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
